@@ -7,13 +7,12 @@ public class PondSizes {
 
     public List<Integer> computePondSizes(int[][] land){
         List<Integer> result = new ArrayList<>();
-        int cols = land[0].length;
         int rows = land.length;
-
+        int cols = land[0].length;
         boolean[][] covered = new boolean[rows][cols];
 
-        for(int i=0; i < cols; i++){
-            for(int j=0; j < rows; j++){
+        for(int i=0; i < rows; i++){
+            for(int j=0; j < cols; j++){
                 //System.out.print(land[i][j] + "\t");
                 if(land[i][j] == 0  && !covered[i][j]){
                     result.add(getSize(land, covered, i, j));
