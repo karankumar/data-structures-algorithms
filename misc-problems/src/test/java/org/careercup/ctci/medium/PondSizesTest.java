@@ -40,4 +40,11 @@ public class PondSizesTest extends TestCase {
         List<Integer> result = classUnderTest.computePondSizes(land);
         assertEquals(0, result.size());
     }
+
+    @Test
+    public void testSingleElementArray() {
+        int[][] land = {{0}};
+        List<Integer> result = classUnderTest.computePondSizes(land);
+        assertEquals(1, result.size());
+    }
 }
