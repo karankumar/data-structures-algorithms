@@ -39,7 +39,7 @@ test-output
 */.settings
 */.factorypath
 target
-*/target
+*/target/**
 *.swp
 pom.xml.versionsBackup
 .DS_Store
